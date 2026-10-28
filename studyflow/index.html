@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyFlow hilft Studierenden, ihre Aufgaben und Lernziele zu organisieren.">
+    <title>StudyFlow | Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">StudyFlow<span>.</span></a>
+        <p>Dein Studium. Deine Organisation.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <p class="eyebrow">DEIN PERSÖNLICHER LERNPLANER</p>
+            <h1>Hallo! Bereit zu lernen?</h1>
+            <p>Organisiere deine Aufgaben und erreiche deine Ziele.</p>
+        </section>
+
+        <section class="stats" aria-label="Aufgabenübersicht">
+            <article class="stat-card">
+                <p>Alle Aufgaben</p>
+                <h2 id="total-count">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <p>Erledigt</p>
+                <h2 id="completed-count">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <p>Offen</p>
+                <h2 id="open-count">0</h2>
+            </article>
+        </section>
+
+        <section class="task-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Meine Aufgaben</h2>
+                    <p>Behalte deine Lernziele im Blick.</p>
+                </div>
+            </div>
+
+            <form id="task-form" class="task-form">
+                <label for="task-input">Neue Aufgabe</label>
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="z. B. HTML wiederholen"
+                    required
+                    maxlength="100"
+                >
+
+                <label for="subject-input">Fach</label>
+                <input
+                    type="text"
+                    id="subject-input"
+                    placeholder="z. B. Webentwicklung"
+                    required
+                    maxlength="50"
+                >
+
+                <label for="due-date">Abgabedatum</label>
+                <input type="date" id="due-date">
+
+                <label for="priority">Priorität</label>
+                <select id="priority">
+                    <option value="low">Niedrig</option>
+                    <option value="medium" selected>Mittel</option>
+                    <option value="high">Hoch</option>
+                </select>
+
+                <button type="submit" class="add-button">
+                    + Aufgabe hinzufügen
+                </button>
+            </form>
+
+            <div class="filter-row">
+                <label for="filter">Aufgaben anzeigen:</label>
+                <select id="filter">
+                    <option value="all">Alle</option>
+                    <option value="open">Offene</option>
+                    <option value="completed">Erledigte</option>
+                </select>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <p id="empty-message" class="empty-message">
+                Noch keine Aufgaben. Füge deine erste Aufgabe hinzu!
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>StudyFlow · Organize your learning, achieve your goals.</p>
+    </footer>
+
+</body>
+</html>
+
+
